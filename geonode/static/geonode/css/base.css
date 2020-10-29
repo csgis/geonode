@@ -6819,7 +6819,6 @@ button.close {
 /* Basics
 ----------------------- */
 div#user_messages {
-  cursor: default;
   position: absolute;
   width: 500px;
   bottom: 20px;
