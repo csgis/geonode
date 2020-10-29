@@ -13,7 +13,7 @@ jobs:
     - name: Compile static files with Grunt
       uses: elstudio/actions-js-build/build@v2
       with:
-        wdPath: './geonode/geonode/static'
+        wdPath: './geonode/static'
 
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v3
