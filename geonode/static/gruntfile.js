@@ -295,5 +295,7 @@ module.exports = function(grunt) {
   // build production
   grunt.registerTask('production', ['jshint', /*'clean:lib',*/ 'less:production', 'concat:bootstrap', 'copy', 'replace', 'cssmin', 'uglify:production', 'babel']);
   grunt.registerTask('build-less-prod', ['less:production']);
+  grunt.registerTask('default', ['jshint', /*'clean:lib',*/ 'less:production', 'concat:bootstrap', 'copy', 'replace', 'cssmin', 'uglify:production', 'babel']);
+
 
 };
