@@ -1,6 +1,6 @@
 name: Grunt build and commit updated stylesheets
 
-on: [push]
+on:
   push:
     paths:
     - './geonode/static'
