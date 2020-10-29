@@ -7,15 +7,16 @@ jobs:
     runs-on: ubuntu-latest
 
   steps:
-    - name: Compile with Grunt
-      uses: actions/checkout@v2
-      uses: actions/setup-node@v2-beta
-      with:
-        node-version: '12'
-      run: npm install
-      run: grunt production
+  - uses: actions/checkout@v2
+
+  - name: Compile with Grunt
+    uses: actions/setup-node@v2-beta
+    with:
+      node-version: '12'
+    run: npm install
+    run: grunt production
       
-    - name: Commit changes
-      uses: elstudio/actions-js-build/commit@v3
-      with:
-        commitMessage: Regenerate geonode_static files 
+  - name: Commit changes
+    uses: elstudio/actions-js-build/commit@v3
+    with:
+      commitMessage: Regenerate geonode_static files 
