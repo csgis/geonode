@@ -3,19 +3,20 @@ name: Grunt build and commit updated stylesheets
 on: [push]
 
 jobs:
-  build:
+  grunt-build:
+
     runs-on: ubuntu-latest
 
-  steps:
-  - uses: actions/checkout@v2
+    steps:
+    - uses: actions/checkout@v2
 
-  - name: Compile with Grunt
-    uses: elstudio/actions-js-build/build@v2
-    with:
-      wdPath: './geonode/static'
-    run: grunt production
-      
-  - name: Commit changes
-    uses: elstudio/actions-js-build/commit@v3
-    with:
+    - name: Compile with Grunt
+      uses: elstudio/actions-js-build/build@v2
+      with:
+        wdPath: './geonode/static'
+      run: grunt production
+
+    - name: Commit changes
+      uses: elstudio/actions-js-build/commit@v3
+      with:
         commitMessage: Regenerate geonode_static files 
