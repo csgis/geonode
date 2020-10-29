@@ -14,7 +14,6 @@ jobs:
       uses: elstudio/actions-js-build/build@v2
       with:
         wdPath: './geonode/static'
-      run: grunt production
 
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v3
