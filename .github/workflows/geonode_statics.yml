@@ -1,6 +1,9 @@
 name: Grunt build and commit updated stylesheets
 
 on: [push]
+  push:
+    paths:
+    - './geonode/static'
 
 jobs:
   grunt-build:
